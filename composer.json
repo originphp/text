@@ -3,7 +3,11 @@
     "description": "OriginPHP Text",
     "type": "library",
     "keywords": [
-        "originphp"
+        "originphp",
+        "text",
+        "string",
+        "tokenzie",
+        "merge"
     ],
     "homepage": "https://www.originphp.com",
     "license": "MIT",
