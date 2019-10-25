@@ -13,6 +13,8 @@ class TextTest extends \PHPUnit\Framework\TestCase
     public function testSlug()
     {
         $this->assertEquals('who-is-ragnarr-lodbrok', Text::slug('Who is Ragnarr Loðbrók?'));
+        $this->assertEquals('v2-0-0-with-extra-spacing', Text::slug('v2.0.0 WITH     extra spacing!'));
+        $this->assertEquals('test-trimming', Text::slug('^test||trimming!'));
     }
 
     public function testTokenize()

@@ -241,18 +241,22 @@ class Text
     }
 
     /**
-     * Creates a slug
+     * Creates a slug for use in a URL the string is converted into ascii then all unmatched
+     * characters are changed to
      *
      * @param string $string
+     * @param array $options The available options keys are :
+     *   - separator: default:-
      * @return string
      */
-    public static function slug(string $string) : string
+    public static function slug(string $string, array $options = []) : string
     {
+        $options += ['separator' => '-'];
         $ascii = static::transliterate($string);
-        $ascii = str_replace(' ', '-', mb_strtolower($ascii));
-        $ascii = preg_replace('/[^a-z0-9-]/i', '', $ascii);
+    
+        $string = preg_replace('/[^a-z0-9-]/i', $options['separator'], mb_strtolower($ascii));
 
-        return $ascii;
+        return trim(preg_replace('/-+/', $options['separator'], $string), '-');
     }
 
     /**

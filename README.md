@@ -24,7 +24,7 @@ $ascii = Text::toAscii('Ragnarr Loðbrók'); // Ragnarr Lodbrok
 
 ## Creating a Slug
 
-To create a URL safe slug
+To create a URL safe slug. The string will be converted to ASCII then any unkown characters will be replaced with the separator.
 
 ```php
 $slug = Text::slug('Who is Ragnarr Loðbrók?'); // who-is-ragnarr-lodbrok
