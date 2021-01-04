@@ -1,7 +1,7 @@
 # Text
 
 ![license](https://img.shields.io/badge/license-MIT-brightGreen.svg)
-[![build](https://travis-ci.org/originphp/text.svg?branch=master)](https://travis-ci.org/originphp/text)
+[![build](https://github.com/originphp/text/workflows/CI/badge.svg)](https://github.com/originphp/text/actions)
 [![coverage](https://coveralls.io/repos/github/originphp/text/badge.svg?branch=master)](https://coveralls.io/github/originphp/text?branch=master)
 
 The Text utility has a number of methods to help when working with strings.
