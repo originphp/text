@@ -70,7 +70,7 @@ To insert values into a string using placeholders (string interpolation)
 ```php
 $string = Text::insert('Record {id} has been updated',[
     'id'=>1234568
-    ]); // Record 1234568 has been updated
+]); // Record 1234568 has been updated
 ```
 
 Another example:
@@ -82,7 +82,7 @@ $string = Text::insert($letter,[
     'first_name' => 'Tony',
     'last_name' => 'Robbins',
     'address_1' => '100 Santa Monica Road',
-    ]);
+]);
 ```
 
 You can also change the place holders
@@ -160,7 +160,7 @@ $wrapped = Text::wordWrap($string,['width'=>50]);
 Other handy string functions  (through `mb_string`)
 
 ```php
-$lowerCase = Text::lower($string);
-$uppserCase = Text::upper($string);
+$lowerCase = Text::toLower($string);
+$uppserCase = Text::toUpper($string);
 $int = Text::length($string);
 ```
