@@ -157,25 +157,23 @@ class Text
     }
 
     /**
-     * Converts a string to lower case
-     *
+     * @deprecated use toLower
      * @param string $string
      * @return string
      */
     public static function lower(string $string) :string
     {
-        return mb_strtolower($string);
+        return static::toLower($string);
     }
 
     /**
-     * Converts a stirng to uppercase
-     *
+     * @deprecated use toUpper
      * @param string $string
      * @return string
      */
     public static function upper(string $string) :string
     {
-        return mb_strtoupper($string);
+        return static::toUpper($string);
     }
 
     /**
@@ -293,5 +291,27 @@ class Text
         $options += ['width' => 80,'break' => "\n",'cut' => false];
 
         return wordwrap($string, $options['width'], $options['break'], $options['cut']);
+    }
+
+    /**
+     * Converts a string to lower case
+     *
+     * @param string $string
+     * @return string
+     */
+    public static function toLower(string $string) :string
+    {
+        return mb_strtolower($string);
+    }
+
+    /**
+     * Converts a stirng to uppercase
+     *
+     * @param string $string
+     * @return string
+     */
+    public static function toUpper(string $string) :string
+    {
+        return mb_strtoupper($string);
     }
 }

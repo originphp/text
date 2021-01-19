@@ -95,6 +95,9 @@ class TextTest extends \PHPUnit\Framework\TestCase
     {
         $this->assertEquals(strtoupper('foo'), Text::upper('foo'));
         $this->assertEquals(strtolower('FOO'), Text::lower('FOO'));
+
+        $this->assertEquals(strtoupper('foo'), Text::toUpper('foo'));
+        $this->assertEquals(strtolower('FOO'), Text::toLower('FOO'));
     }
     public function testReplace()
     {
