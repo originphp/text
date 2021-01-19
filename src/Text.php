@@ -31,7 +31,7 @@ class Text
     */
     public static function contains(string $needle, string $haystack) : bool
     {
-        return $needle !== '' and (mb_strpos($haystack, $needle) !== false);
+        return $needle !== '' && (mb_strpos($haystack, $needle) !== false);
     }
 
     /**
@@ -87,7 +87,7 @@ class Text
     {
         $length = mb_strlen($needle);
 
-        return  ($needle !== '' and mb_substr($haystack, 0, $length) === $needle);
+        return  ($needle !== '' && mb_substr($haystack, 0, $length) === $needle);
     }
 
     /**
@@ -101,7 +101,7 @@ class Text
     {
         $length = mb_strlen($needle);
 
-        return ($needle !== '' and mb_substr($haystack, -$length, $length) === $needle);
+        return ($needle !== '' && mb_substr($haystack, -$length, $length) === $needle);
     }
 
     /**
